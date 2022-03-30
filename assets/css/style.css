@@ -1,0 +1,273 @@
+/*variables*/
+
+:root {
+  --accent-color: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --primary-light-color: hsl(217, 12%, 63%);
+  --primary-medium-color: hsl(216, 12%, 54%);
+  --primary-dark-color: hsl(213, 22%, 15%);
+  --secondary-dark-color: hsl(213, 19%, 18%);
+  --primary-very-dark-color: hsl(216, 12%, 8%);
+  --main-font: 'Overpass', sans-serif;
+}
+
+/*end of variables*/
+/*resets*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-family: var(--main-font);
+}
+
+/*end of resets*/
+/*styles*/
+
+main,
+.cards-container,
+.rating-card,
+.thanks-card {
+  display: flex;
+  flex-direction: column;
+}
+
+main,
+.cards-container,
+.thanks-card {
+  align-items: center;
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+  color: var(--primary-medium-color);
+}
+
+.visible {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+main {
+  justify-content: center;
+  background: var(--primary-very-dark-color);
+  height: 100%;
+}
+
+.cards-container {
+  justify-content: center;
+  min-width: 37.5rem;
+  height: auto;
+  padding: 15.4rem 2.4rem;
+}
+
+.rating-card,
+.thanks-card {
+  justify-content: flex-start;
+  width: 32.7rem;
+  height: 36rem;
+  background: var(--primary-dark-color);
+  border-radius: 2rem;
+}
+
+.rating-card {
+  align-items: flex-start;
+  padding: 2.3rem 2.2rem 0 2.4rem;
+}
+
+.rating-card figure,
+.rating {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 2.2rem;
+  border-radius: 50%;
+  background: var(--secondary-dark-color);
+}
+
+.rating-card figure img {
+  margin: 1.1rem;
+}
+
+.rating-card h2 {
+  margin-bottom: 1.6rem;
+}
+
+.ratings-container {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  gap: 1.9rem;
+  margin-top: 2.8rem;
+  margin-bottom: 2.2rem;
+  list-style: none;
+}
+
+.rating {
+  margin-bottom: 0;
+  border: none;
+  font-size: 1.5rem;
+  font-family: var(--main-font);
+  font-weight: 400;
+  color: var(--primary-medium-color);
+}
+
+.rating:hover {
+  background: var(--primary-light-color);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.rating:focus {
+  background: var(--accent-color);
+  color: var(--white);
+  outline: 0.1rem solid var(--accent-color);
+}
+
+.submit-btn {
+  align-self: center;
+  width: 27.9rem;
+  height: 4.6rem;
+  padding: 0.3rem 0 0;
+  border-radius: 3rem;
+  border: none;
+  background: var(--accent-color);
+  font-family: var(--main-font);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--white);
+  letter-spacing: 0.1rem;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  cursor: pointer;
+  background: var(--white);
+  color: var(--accent-color);
+}
+
+.submit-btn:focus {
+  outline: 0.1rem solid var(--white);
+}
+
+.thanks-card {
+  padding: 3.2rem 2.7rem 0 2.8rem;
+}
+
+.thanks-card img {
+  width: 14.5rem;
+  height: 9.9rem;
+  margin-bottom: 2.4rem;
+}
+
+.rating-selected {
+  display: flex;
+  align-items: center;
+  height: 3.2rem;
+  padding: 0 1.2rem;
+  margin-bottom: 2.8rem;
+  background: var(--secondary-dark-color);
+  border-radius: 3rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--accent-color);
+}
+
+.thanks-card h2 {
+  margin-bottom: 1.1rem;
+}
+
+.thanks-card p {
+  text-align: center;
+}
+
+.attribution {
+  font-size: 1.2rem;
+}
+
+.attribution a {
+  color: var(--primary-medium-color);
+  text-decoration: none;
+}
+
+.attribution a:hover,
+.attribution a:focus {
+  color: var(--accent-color);
+}
+
+@media only screen and (min-width: 470px) {
+  .rating-card, 
+  .thanks-card {
+    width: 41.4rem;
+    height: 41.7rem;
+  }
+
+  .rating-card {
+    padding: 3.2rem 4rem 0 3.2rem;
+  }
+
+  .rating-card figure {
+    width: 4.8rem;
+    height: 4.8rem;
+    margin-bottom: 3rem;
+  }
+
+  .rating-card figure img {
+    margin: 1.5rem;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+  }
+
+  .ratings-container {
+    margin-bottom: 3.1rem;
+  }
+  
+  .rating {
+    width: 5.3rem;
+    height: 5.3rem;
+    font-size: 1.6rem;
+  }
+
+  .submit-btn {
+    width: 34.1rem;
+    font-size: 1.6rem;
+  }
+
+  .thanks-card {
+    padding: 4.5rem 4.3rem 0 3.5rem;
+  }
+
+  .thanks-card img {
+    width: 16.2rem;
+    height: 10.8rem;
+    margin-bottom: 3.1rem;
+  }
+
+  .rating-selected {
+    padding: 0 2rem;
+    font-size: 1.6rem;
+  }
+}
