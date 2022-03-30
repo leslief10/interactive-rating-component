@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Interactive rating component]()
+- Live Site URL: [Interactive rating component](https://leslief10.github.io/interactive-rating-component/)
 
 ## My process
 
