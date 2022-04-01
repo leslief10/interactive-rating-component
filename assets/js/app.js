@@ -14,7 +14,7 @@ function toggleCardsVisibility() {
 }
 
 function ratingSelectedButton(e) {
-  ratingSelectedText.innerHTML = `You selected ${e.target.textContent} out of 5`;
+  ratingSelectedText.textContent = `You selected ${e.target.textContent} out of 5`;
   submitBtn.disabled = false;
 }
 
